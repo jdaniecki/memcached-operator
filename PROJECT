@@ -2,9 +2,19 @@
 # This file is used to track the info used to scaffold your project
 # and allow the plugins properly work.
 # More info: https://book.kubebuilder.io/reference/project-config.html
-domain: github.com/jdaniecki
+domain: jdanieck.github.com
 layout:
 - go.kubebuilder.io/v4
 projectName: memcached-operator
 repo: github.com/jdaniecki/memcached-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: jdanieck.github.com
+  group: cache
+  kind: Memcached
+  path: github.com/jdaniecki/memcached-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
